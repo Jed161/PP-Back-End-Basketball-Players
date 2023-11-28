@@ -6,19 +6,19 @@ CREATE DATABASE players_dev;
 
 CREATE TABLE players (
     id SERIAL PRIMARY KEY,
-    player_name TEXT NOT NULL,
+    playerName TEXT NOT NULL,
     img_url TEXT,
-    year_drafted DATE,
-    team_drafted_by VARCHAR(40),
-    rookie_of_the_year BOOLEAN
+    yearDrafted DATE,
+    teamDraftedBy VARCHAR(40),
+    rookieOfTheYear BOOLEAN
 );
 
 CREATE TABLE reviews (
     id SERIAL PRIMARY KEY,
-    reviewer_name TEXT NOT NULL,
+    reviewer TEXT NOT NULL,
     content TEXT,
     favorite BOOLEAN,
-    rookie_rating NUMERIC,
+    rookieRating NUMERIC,
     CHECK (rookie_rating >= 0 AND rookie_rating <= 10),
     player_id INTEGER REFERENCES plqayers (id)
     ON DELETE CASCADE
