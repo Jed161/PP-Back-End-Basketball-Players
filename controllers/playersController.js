@@ -52,7 +52,7 @@ players.delete("/:id", async (req, res) => {
         if (deletedPlayer) {
             res.status(200).json( {success: true, payload: {data: deletedPlayer}})
         } else {
-            res.status(404).json("playeer not found")
+            res.status(404).json("player not found")
         }
     } catch(err) {
         res.send(err)

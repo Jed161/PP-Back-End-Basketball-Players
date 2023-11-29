@@ -1,9 +1,9 @@
-const checkReviewerName = (req, res, next) => {
-    if (req.body.reviewerName) {
-        console.log("Reviewer name is okay")
+const checkPlayerName = (req, res, next) => {
+    if (req.body.playerName) {
+        console.log("Player name is okay")
         next()
     } else {
-        res.status(400).json({ error: "Reviewer Name is required "})
+        res.status(400).json({ error: "Player Name is required "})
     }
 };
 
@@ -18,6 +18,6 @@ const checkBoolean = (req, res, next) => {
 };
 
 module.exports = {
-    checkReviewerName,
+    checkPlayerName,
     checkBoolean
 };
