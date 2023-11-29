@@ -15,11 +15,11 @@ CREATE TABLE players (
 
 CREATE TABLE reviews (
     id SERIAL PRIMARY KEY,
-    reviewer TEXT NOT NULL,
+    reviewerName TEXT NOT NULL,
     content TEXT,
     favorite BOOLEAN,
     rookieRating NUMERIC,
     CHECK (rookie_rating >= 0 AND rookie_rating <= 10),
-    player_id INTEGER REFERENCES plqayers (id)
+    player_id INTEGER REFERENCES players (id)
     ON DELETE CASCADE
 );
