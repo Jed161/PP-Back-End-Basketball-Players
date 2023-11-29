@@ -8,8 +8,8 @@ CREATE TABLE players (
     id SERIAL PRIMARY KEY,
     playerName TEXT NOT NULL,
     img_url TEXT,
-    yearDrafted DATE,
-    teamDraftedBy VARCHAR(40),
+    yearDrafted VARCHAR(255),
+    teamDraftedBy VARCHAR(255),
     rookieOfTheYear BOOLEAN
 );
 
@@ -19,7 +19,7 @@ CREATE TABLE reviews (
     content TEXT,
     favorite BOOLEAN,
     rookieRating NUMERIC,
-    CHECK (rookie_rating >= 0 AND rookie_rating <= 10),
+    CHECK (rookieRating >= 0 AND rookieRating <= 10),
     player_id INTEGER REFERENCES players (id)
     ON DELETE CASCADE
 );

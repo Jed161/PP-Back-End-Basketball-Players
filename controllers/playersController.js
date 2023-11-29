@@ -32,14 +32,14 @@ players.get("/", async (req, res) => {
         .json({ success: true, data: { payload: allPlayers }});
     } else {
         res.status(500)
-        .json({success: false, data: {error: "Server error"}});
+        .json({success: false, data: { error: "Server error" }});
     }
 });
 
 players.post("/", checkPlayerName, checkBoolean, async (req, res) => {
     try {
         const createdPlayer = await createPlayer(req.body)
-        res.json(createPlayer)
+        res.json(createdPlayer)
     } catch (error) {
         res.status(400).json({error: "You have an error"})
     }

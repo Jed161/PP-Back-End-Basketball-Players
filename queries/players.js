@@ -9,7 +9,7 @@ const getAllPlayers = async () => {
     }
 };
 
-const getonePlayer = async (id) => {
+const getOnePlayer = async (id) => {
     try {
         const onePlayer = await db.one("SELECT * FROM players WHERE id=$1", id)
         return onePlayer
@@ -53,8 +53,8 @@ const updatePlayer = async (id, player) => {
 
 module.exports = {
     getAllPlayers,
-    getonePlayer,
+    getOnePlayer,
     createPlayer,
     deletePlayer,
     updatePlayer
-}
+};

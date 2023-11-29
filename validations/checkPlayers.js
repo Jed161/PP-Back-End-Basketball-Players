@@ -20,4 +20,4 @@ const checkBoolean = (req, res, next) => {
 module.exports = {
     checkReviewerName,
     checkBoolean
-}
+};
