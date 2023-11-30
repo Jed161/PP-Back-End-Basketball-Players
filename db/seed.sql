@@ -2,7 +2,7 @@
 
 INSERT INTO players (playerName, img_url, yearDrafted, teamDraftedBy, rookieOfTheYear)
 VALUES
-('Michael Jordan', 'https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTY4MTg2MDIzMDQ5MDQ1MjY1/1983-michael-jordan-001283945jpg.webp', 1984 , 'Chicago Bulls', true),
+('Michael Jordan', 'https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_620/MTY4MTg2MDIzMDQ5MDQ1MjY1/1983-michael-jordan-001283945jpg.webp', '1984' , 'Chicago Bulls', true),
 
 ('Allen Iverson', 'https://www.si.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_571/MTY4MTI3NTczMTEwNTY0MTEz/allen-iverson.webp', '1996', 'Philadelphia 76ers', true),
 
